@@ -19,7 +19,7 @@ from django.urls import path
 from crudapplication.views import salary, views
 
 urlpatterns = [
-    path('create', views.create, name='create'),
+    path('create1', views.create, name='create'),
     path('show', views.show, name='show'),
     path('delete/<int:id>', views.delete, name='delete'),
     path('edit/<int:id>', views.edit, name='edit'),
