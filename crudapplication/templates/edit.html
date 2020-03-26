@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Student</title>
+</head>
+<body>
+
+
+    <form method="post" action="/crudapplication/update/{{ employee.id }}">
+        {% csrf_token %}
+    <table border="1" align="center" cellpadding="10" cellspacing="0">
+          <tr>
+            <td>Employee Id</td>
+            <td><input type="text" id="id_empid" name="empid" value="{{ employee.empid }}">
+
+            </td>
+        </tr>
+        <tr>
+            <td>Employee Name</td>
+            <td><input type="text" id="id_empname" name="empname" value="{{ employee.empname }}">
+
+            </td>
+        </tr>
+         <tr>
+            <td>Email</td>
+            <td><input type="text" id="id_email" name="email" value="{{ employee.email }}"> </td>
+        </tr>
+         <tr>
+            <td>Contact</td>
+            <td><input type="text" id="id_contact" name="contact" value="{{ employee.contact }}"> </td>
+        </tr>
+         <tr>
+            <td colspan="2" align="center">
+                <input type="submit" id="submit" name="submit" value="Update">
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

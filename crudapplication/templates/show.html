@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display All Users</title>
+</head>
+<body>
+    <a href="create">Add New Employee</a>
+    <table border="1" align="center" cellspacing="0" cellpadding="10">
+        <tr bgcolor="silver">
+            <td>EmployeeID</td>
+            <td>EmployeeName</td>
+            <td>Email</td>
+            <td>Contact</td>
+            <td>Actions</td>
+        </tr>
+        {% for emp in employees %}
+            <tr>
+                <td>{{ emp.empid }}</td>
+                <td>{{ emp.empname }}</td>
+                <td>{{ emp.email }}</td>
+                <td>{{ emp.contact }}</td>
+                <td>
+                    <a href="edit/{{ emp.id }}">Edit</a>
+                    <a href="delete/{{ emp.id }}">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

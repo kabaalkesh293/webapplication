@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Student</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+    <table border="1" align="center" cellpadding="10" cellspacing="0">
+          <tr>
+            <td>Employees</td>
+            <td>
+                <select id="id_employee" name="employee">
+                    <option value="">Select Employee</option>
+                   {% for emp in employees %}
+                    <option value="{{ emp.id }}">{{ emp.empname }}</option>
+
+                   {% endfor %}
+
+                </select>
+
+            </td>
+        </tr>
+        <tr>
+            <td>Salary</td>
+            <td><input type="text" id="id_salary" name="salary">
+
+            </td>
+        </tr>
+
+
+         <tr>
+            <td colspan="2" align="center">
+                <input type="submit" id="submit" name="submit" value="Submit">
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
